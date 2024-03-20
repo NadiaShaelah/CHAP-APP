@@ -1,6 +1,6 @@
 import { faBox, faCartShopping, faHandshakeSimple, faUtensils } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Carousel from '../Carousel/Carousel'
 import Epicerie from '../AllMarketCategories/Epicerie'
@@ -8,7 +8,9 @@ import Cosmetique from '../AllMarketCategories/Cosmetique'
 import Textile from '../AllMarketCategories/Textile'
 
 function HomPage() {
-
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
     const slides = [
         "https://firebasestorage.googleapis.com/v0/b/appchapfinal.appspot.com/o/slider%2FabjPars.png?alt=media&token=c037631d-b5d7-47e8-b844-beb8b7fdca71",
         "https://firebasestorage.googleapis.com/v0/b/appchapfinal.appspot.com/o/slide%2FBakery.png?alt=media&token=574eecdf-7fc8-449f-a8d0-e5f9e14f9325",

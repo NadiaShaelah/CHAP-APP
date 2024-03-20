@@ -35,12 +35,14 @@ import PartnersLogin from './components/Partners/PartnersLogin';
 import UserLogin from './components/User/UserLogin';
 import UserRegister from './components/User/UserRegister';
 import User from './components/User/User';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
     
     return (
         <>
             <Header/>
+            <ScrollToTop/>
             <Routes>
                 <Route path='/' element={<HomPage/>}/>
                 <Route path='/epicerie-stores' element={<EpicerieStores/>}/>
