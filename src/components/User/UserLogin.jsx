@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { faUser, faUserCircle, faUserGroup } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 
 import logo from '../../images/chap-logo.png'

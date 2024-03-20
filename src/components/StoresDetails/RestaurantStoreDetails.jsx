@@ -1,12 +1,7 @@
 import React from 'react'
 import restoBgImg from '../../images/restaurant.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFileWord, faGlobe, faLocationDot, faMapMarkedAlt, faPhone, faPlus, faStar } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
-import cityMap from '../../images/map-city.avif'
 import RecommendedProducts from '../RecommendedProducts/RecommendedProducts'
 import StoreDetails from './StoreDetails'
-import ProductsAvailable from '../AvailableProducts/AvailableProducts'
 import AvailableProducts from '../AvailableProducts/AvailableProducts'
 
 
