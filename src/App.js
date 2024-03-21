@@ -36,6 +36,8 @@ import UserLogin from './components/User/UserLogin';
 import UserRegister from './components/User/UserRegister';
 import User from './components/User/User';
 import ScrollToTop from './components/ScrollToTop';
+import TabsPanel from './PropsTest/TabsPanel';
+import TabsParent from './PropsTest/TabsParent';
 
 function App() {
     
@@ -78,6 +80,9 @@ function App() {
                 <Route path='/user-connexion' element={<User/>}/>
                 <Route path='/user-login' element={<UserLogin/>}/>
                 <Route path='/user-register' element={<UserRegister/>}/>
+                <Route path='/tabs-panel' element={<TabsPanel/>}/>
+                <Route path='/tabs-parent' element={<TabsParent/>}/>
+
             </Routes>
             <Footer/>
         </>

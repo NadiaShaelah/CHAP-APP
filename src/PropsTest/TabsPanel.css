@@ -1,0 +1,9 @@
+.tabs__smart-bar {
+    width: 0px;
+    height: 3px;
+    background-color: #f40e0e;
+    border-radius: 99px;
+    transition: 
+    transform 0.2s ease-out,
+    width 0.2s ease-out;
+}

@@ -112,7 +112,7 @@ function ReservationRestauDetails() {
                 
                 <div className="menu-cart bg-gray-300 py-10">
                     <div className="container mx-auto flex flex-col gap-4">
-                        <h2 className='text-4xl font-bold text-center mb-4'>La carte</h2>
+                        <h2 className='text-4xl font-bold text-center text-gray-700 mb-4'>La carte</h2>
                         <MenuCard/>
                     </div>
                 </div>

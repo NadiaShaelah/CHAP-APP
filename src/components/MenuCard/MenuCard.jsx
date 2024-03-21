@@ -1,37 +1,110 @@
-import React, { useState } from 'react';
+import React from 'react';
 
+import { Tabs, Tab } from './Tabs';
 
 function MenuCard() {
-    const [activeTab, setActiveTab] = useState(0);
-
-    // Define the tabs array within the component
-    const tabs = [
-        { title: 'Entrées', content: 'Entrées Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nemo a odit numquam beatae minus, inventore excepturi eligendi molestiae quidem aperiam harum, dolor ab. Harum iusto consequatur, deleniti sapiente accusamus quo voluptatum, minus, beatae magni ut voluptate. Dicta deserunt doloribus voluptatem aperiam nemo omnis laudantium fugiat cumque corporis, molestias, sapiente quis maiores sit ratione nihil ad assumenda. Assumenda, temporibus voluptates ratione distinctio rem ipsam odio quae? Temporibus quidem suscipit alias aut incidunt aliquid minus doloribus dolore ducimus sed consequatur, nulla tempora, corporis praesentium eaque ipsum modi libero optio est quia atque? Quisquam, vitae quidem? Dolore eligendi delectus quae maiores cum.' },
-        { title: 'Plats', content: 'Plats Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nemo a odit numquam beatae minus, inventore excepturi eligendi molestiae quidem aperiam harum, dolor ab. Harum iusto consequatur, deleniti sapiente accusamus quo voluptatum, minus, beatae magni ut voluptate. Dicta deserunt doloribus voluptatem aperiam nemo omnis laudantium fugiat cumque corporis, molestias, sapiente quis maiores sit ratione nihil ad assumenda. Assumenda, temporibus voluptates ratione distinctio rem ipsam odio quae? Temporibus quidem suscipit alias aut incidunt aliquid minus doloribus dolore ducimus sed consequatur, nulla tempora, corporis praesentium eaque ipsum modi libero optio est quia atque? Quisquam, vitae quidem? Dolore eligendi delectus quae maiores cum.' },
-        { title: 'Accompagnements', content: 'Accompagnements Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nemo a odit numquam beatae minus, inventore excepturi eligendi molestiae quidem aperiam harum, dolor ab. Harum iusto consequatur, deleniti sapiente accusamus quo voluptatum, minus, beatae magni ut voluptate. Dicta deserunt doloribus voluptatem aperiam nemo omnis laudantium fugiat cumque corporis, molestias, sapiente quis maiores sit ratione nihil ad assumenda. Assumenda, temporibus voluptates ratione distinctio rem ipsam odio quae? Temporibus quidem suscipit alias aut incidunt aliquid minus doloribus dolore ducimus sed consequatur, nulla tempora, corporis praesentium eaque ipsum modi libero optio est quia atque? Quisquam, vitae quidem? Dolore eligendi delectus quae maiores cum.' },
-        { title: 'Specialités', content: 'Specialités Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nemo a odit numquam beatae minus, inventore excepturi eligendi molestiae quidem aperiam harum, dolor ab. Harum iusto consequatur, deleniti sapiente accusamus quo voluptatum, minus, beatae magni ut voluptate. Dicta deserunt doloribus voluptatem aperiam nemo omnis laudantium fugiat cumque corporis, molestias, sapiente quis maiores sit ratione nihil ad assumenda. Assumenda, temporibus voluptates ratione distinctio rem ipsam odio quae? Temporibus quidem suscipit alias aut incidunt aliquid minus doloribus dolore ducimus sed consequatur, nulla tempora, corporis praesentium eaque ipsum modi libero optio est quia atque? Quisquam, vitae quidem? Dolore eligendi delectus quae maiores cum.' },
-        { title: 'Boissons', content: 'Boissons Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nemo a odit numquam beatae minus, inventore excepturi eligendi molestiae quidem aperiam harum, dolor ab. Harum iusto consequatur, deleniti sapiente accusamus quo voluptatum, minus, beatae magni ut voluptate. Dicta deserunt doloribus voluptatem aperiam nemo omnis laudantium fugiat cumque corporis, molestias, sapiente quis maiores sit ratione nihil ad assumenda. Assumenda, temporibus voluptates ratione distinctio rem ipsam odio quae? Temporibus quidem suscipit alias aut incidunt aliquid minus doloribus dolore ducimus sed consequatur, nulla tempora, corporis praesentium eaque ipsum modi libero optio est quia atque? Quisquam, vitae quidem? Dolore eligendi delectus quae maiores cum.' },
-        { title: 'Cocktails', content: 'Cocktails Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nemo a odit numquam beatae minus, inventore excepturi eligendi molestiae quidem aperiam harum, dolor ab. Harum iusto consequatur, deleniti sapiente accusamus quo voluptatum, minus, beatae magni ut voluptate. Dicta deserunt doloribus voluptatem aperiam nemo omnis laudantium fugiat cumque corporis, molestias, sapiente quis maiores sit ratione nihil ad assumenda. Assumenda, temporibus voluptates ratione distinctio rem ipsam odio quae? Temporibus quidem suscipit alias aut incidunt aliquid minus doloribus dolore ducimus sed consequatur, nulla tempora, corporis praesentium eaque ipsum modi libero optio est quia atque? Quisquam, vitae quidem? Dolore eligendi delectus quae maiores cum.' }
-    ];
-
-    const handleTabClick = (index) => {
-        setActiveTab(index);
-    };
-
-    const renderTabs = () => {
-        return tabs.map((tab, index) => (
-            <div key={index} onClick={() => handleTabClick(index)} className={activeTab === index ? 'active w-full lg:w-1/6 text-white bg-cyan-600 p-2 transition duration-500 ease-in-out hover:bg-cyan-800 transform hover:-translate-y-1 hover:scale-110' : 'text-cyan-600'}>
-                {tab.title}
-            </div>
-        ));
-    };
-
     return (
-        <div className="tabs-container container mx-auto flex flex-col gap-8 relative px-4 lg:px-0">
-            <div className="flex flex-col lg:flex-row justify-between lg:items-center font-bold cursor-pointer">{renderTabs()}</div>
-            <div className="tab-content">{tabs[activeTab]?.content}</div>
+        <div>
+            <Tabs>
+                <Tab label="Entrées">
+                    <div className="py-4">
+                        <h2 className="text-lg font-medium mb-2">Entrées Content</h2>
+                        <p className="text-gray-700">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae
+                            quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis
+                            harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!
+                            Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius
+                            earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia
+                            aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas
+                            aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium
+                            molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+                            recusandae alias error harum maxime adipisci amet laborum.
+                        </p>
+                    </div>
+                </Tab>
+                <Tab label="Plats">
+                    <div className="py-4">
+                        <h2 className="text-lg font-medium mb-2">Plats Content</h2>
+                        <p className="text-gray-700">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae
+                            quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis
+                            harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!
+                            Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius
+                            earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia
+                            aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas
+                            aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium
+                            molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+                            recusandae alias error harum maxime adipisci amet laborum.
+                        </p>
+                    </div>
+                </Tab>
+                <Tab label="Accompagnements">
+                    <div className="py-4">
+                        <h2 className="text-lg font-medium mb-2">Accompagnements Content</h2>
+                        <p className="text-gray-700">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae
+                            quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis
+                            harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!
+                            Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius
+                            earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia
+                            aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas
+                            aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium
+                            molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+                            recusandae alias error harum maxime adipisci amet laborum.
+                        </p>
+                    </div>
+                </Tab>
+                <Tab label="Specialités">
+                    <div className="py-4">
+                        <h2 className="text-lg font-medium mb-2">Specialités Content</h2>
+                        <p className="text-gray-700">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae
+                            quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis
+                            harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!
+                            Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius
+                            earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia
+                            aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas
+                            aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium
+                            molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+                            recusandae alias error harum maxime adipisci amet laborum.
+                        </p>
+                    </div>
+                </Tab>
+                <Tab label="Boissons">
+                    <div className="py-4">
+                        <h2 className="text-lg font-medium mb-2">Boissons Content</h2>
+                        <p className="text-gray-700">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae
+                            quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis
+                            harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!
+                            Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius
+                            earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia
+                            aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas
+                            aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium
+                            molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+                            recusandae alias error harum maxime adipisci amet laborum.
+                        </p>
+                    </div>
+                </Tab>
+                <Tab label="Cocktails">
+                    <div className="py-4">
+                        <h2 className="text-lg font-medium mb-2">Cocktails Content</h2>
+                        <p className="text-gray-700">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae
+                            quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis
+                            harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum!
+                            Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius
+                            earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia
+                            aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas
+                            aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? Ipsa laudantium
+                            molestias eos sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+                            recusandae alias error harum maxime adipisci amet laborum.
+                        </p>
+                    </div>
+                </Tab>
+            </Tabs>
         </div>
     );
 }
 
-export default MenuCard
+export default MenuCard;
